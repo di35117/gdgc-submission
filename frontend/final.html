@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Form</title>
+  <link rel="stylesheet" href="final.css">
+</head>
+<body>
+  <form id="paymentForm">
+    <div id="errorMessage"></div>
+
+    <div class="first">
+      <label>Paid to UPI ID No.</label><br>
+      <div id="card"></div>
+      <input type="radio" name="upi" id="upi1" value="upi1"> UPI ID - 1 <br>
+      <input type="radio" name="upi" id="upi2" value="upi2"> UPI ID - 2
+    </div>
+
+    <div class="cards">
+      <label for="proof">Proof of Payment (Screenshot)</label><br>
+      <input type="file" id="proof" name="proof" accept="image/*">
+    </div>
+
+    <div class="cards">
+      <label for="whatsapp">Join the WhatsApp Group</label><br>
+      <h2><a href="#" id="whatsapp">Whatsapp Group Link</a></h2>
+    </div>
+
+    <div class="cards">
+      <label for="contact">CONTACT (in case of doubt)</label><br>
+      <h2>Contact info: 999999999</h2>
+      <h2>email: helloworld@gmail.com</h2>
+    </div>
+
+    <div class="buttons">
+      <a href="3rdpage.html"><button type="button" id="backBtn">Back</button></a>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <script src="final.js"></script>
+</body>
+</html>

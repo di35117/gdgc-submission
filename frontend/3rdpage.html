@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Payment Details</h2>
+      <form id="paymentForm">
+        <div id="errorMessage"></div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email..." />
+          </div>
+
+          <div class="form-group">
+            <label for="scholar">Scholar Id</label>
+            <input
+              type="text"
+              id="scholar"
+              placeholder="Enter your Scholar ID"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="hostel">Hostel No.</label>
+            <input
+              type="text"
+              id="hostel"
+              placeholder="Enter your hostel no."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input
+              type="text"
+              id="mobile"
+              placeholder="Enter your Mobile Number"
+            />
+          </div>
+
+          <div class="form-group name-field">
+            <label for="fname">Name</label>
+            <div class="name-box">
+              <input type="text" id="fname" placeholder="First name" />
+              <input type="text" id="lname" placeholder="Last name" />
+            </div>
+          </div>
+        </div>
+        <div class="upi-section">
+          <div class="upi">
+            <p>UPI ID - 1</p>
+            <div class="qr-box"></div>
+          </div>
+          <div class="upi">
+            <p>UPI ID - 2</p>
+            <div class="qr-box"></div>
+          </div>
+        </div>
+        <div class="button-row">
+            
+          <a href="2ndpage.html"><button type="submit" class="btn back">Back</button></a>
+          <button type="submit" class="btn next">Next</button>
+        </div>
+      </form>
+    </div>
+    <script src="script2.js"></script>
+  </body>
+</html>
