@@ -11,20 +11,19 @@ const userSchema = new Schema(
     },
 
     quantity: {
-      type: Number,
+      type: String,
       required: true,
       min: 1,
       default: 1,
     },
 
     priceAtPurchase: {
-      type: Number,
+      type: String,
       required: true,
     },
     email: {
       type: String,
       required: [true, "Please enter an email address"],
-      unique: true,
       lowecase: true,
       trim: true,
       index: true,
@@ -40,7 +39,6 @@ const userSchema = new Schema(
     scholarId: {
       type: String,
       required: [true, "Please enter the schoalr ID"],
-      unique: true,
       trim: true,
     },
     hostelNumber: {
@@ -60,6 +58,7 @@ const userSchema = new Schema(
     },
     proofOfPayment: {
       type: String,
+      required: [true, "Please upload proof of your payment"]
     },
     isVerified: {
         type: Boolean,
