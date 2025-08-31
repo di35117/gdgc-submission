@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         alert("Data submitted");
         const response = await fetch(
-          "http://localhost:8000/api/v1/users/submitData",
+          "https://gdgc-submission.onrender.com/api/v1/users/submitData",
           {
             method: "POST",
             body: formData,
