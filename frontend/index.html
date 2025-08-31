@@ -1,47 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>First page</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-  </head>
-  <body>
-    <nav id="navigation">
-      <ul class="sidebar">
-        <li onclick=hideSideBar()>
-          <a href="#"><span class="material-symbols-outlined"> close </span></a>
-        </li>
-        <li><a href="#">Hello</a></li>
-        <li><a href="#">Hello</a></li>
-        <li><a href="#">Hello</a></li>
-      </ul>
-      <ul>
-        <li ><a href="#"><img src="./pics/gdgc logo.png" alt="" class="imageInsert"></a></li>
-        <li class="hideOnMobile"><a href="#">Hello</a></li>
-        <li class="hideOnMobile"><a href="#">Hello</a></li>
-        <li class="hideOnMobile"><a href="#">Hello</a></li>
-        <li onclick=showSidebar() class="menuBtn">
-          <a href="#"><span class="material-symbols-outlined"> menu </span></a>
-        </li>
-      </ul>
-    </nav>
-    <div>
-        
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDGC-Merchandise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sticky-nav">
+        <div class="menu">
+        </div>
+        <div class="logo">
+            <img src="img.svg" alt="icon">
+            <span class="icon">GDGC</span>
+        </div>
+
+        <div class="menu-buttons container-fluid d-none d-md-flex justify-content-start gap-3 p-3">
+            <a href="#" class="menu-options text-dark text-decoration-none">Home</a>
+            <a href="#" class="menu-options text-dark text-decoration-none">Contact Us</a>
+            <a href="product.html" class="menu-options text-dark text-decoration-none">Products</a>
+        </div>
+
+        <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu">
+            <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasMenuLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="index.html" class="menu-options d-block mb-2 text-dark text-decoration-none">Home</a>
+                <a href="#" class="menu-options d-block mb-2 text-dark text-decoration-none">Contact Us</a>
+                <a href="#" class="menu-options d-block mb-2 text-dark text-decoration-none">Products</a>
+            </div>
+        </div>
+
     </div>
-    <script>
-      function showSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "flex";
-      }
-      function hideSideBar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "none";
-      }
-    </script>
-  </body>
+
+    <div class="delivery-bar">
+        <div class="badge">
+            <i class="fa-solid fa-location-dot"></i>
+            <label for="hostel">Deliver to -</label>
+            <select name="hostel" id="hostel">
+                <option value="BH-7">BH-7</option>
+                <option value="BH-6">BH-6</option>
+                <option value="BH-9">BH-9</option>
+                <option value="BH-3">BH-3</option>
+                <option value="GH-3">GH-3</option>
+                <option value="GH-2">GH-2</option>
+                <option value="GH-1">GH-1</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="banner">
+            <div class="bubbles" style="z-index: -100;">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="green" style="z-index: -1000;"></div>
+                <div class="blue"></div>
+            </div>
+            <h1 style="z-index: 100;">Official
+                <span class="gdgc">
+                    <span>G</span><span>D</span><span>G</span><span>C</span>
+                </span>
+                Merchandise
+            </h1>
+            <div class="sliding-text">
+                <div>Wear your code</div>
+                <div>Build your dreams</div>
+                <div>Order now</div>
+            </div>
+
+        </div>
+        <div>
+            <img src="googlemerch.jpg" class="product">
+        </div>
+    </div>
+    <div class="order-now">
+        <button class="order"><a href="product.html">Order Now</a></button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
+

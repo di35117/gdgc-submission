@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const next = document.querySelector(".next");
   const errorMessage = document.getElementById("errorMessage");
   const back = document.querySelector(".back").addEventListener("click", () => {
-    window.location.href = "2ndpage.html";
+    window.location.href = "product.html";
     alert("Going back to previous step");
   });
 
