@@ -4,76 +4,107 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; 
+  height: auto;
+  padding: 20px 0;
 }
 
 form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
 }
 
-.cards {
+.cards,
+.first {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background: #fff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.cards label,
+.first label {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 input[type="text"],
 input[type="file"] {
   margin-top: 10px;
-  padding: 8px;
+  padding: 10px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 6px;
+  font-size: 16px;
 }
 
 #errorMessage {
-  grid-column: span 2;
+  grid-column: auto;
   background: #ffe0e0;
   color: red;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   border: 1px solid red;
   border-radius: 6px;
   display: none;
 }
 
 .buttons {
-  grid-column: span 2;
+  grid-column: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 15px;
 }
 
 button {
-  margin: 10px;
-  padding: 10px 20px;
+  margin: 0;
+  padding: 12px 20px;
   border: none;
   border-radius: 8px;
   background: #4a80f0;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  width: 100%;
+  max-width: 350px;
 }
 
 button:hover {
   background: #365dcf;
 }
+
 #whatsapp {
   text-decoration: none;
 }
-.first {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+
 #card {
-    display: flex;
+  display: flex;
+}
+@media (min-width: 768px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #errorMessage {
+    grid-column: span 2;
+  }
+
+  .buttons {
+    grid-column: span 2;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  button {
+    width: auto;
+  }
 }
