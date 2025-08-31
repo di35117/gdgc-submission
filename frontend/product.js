@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const qtySpan = document.querySelector(".qty");
   const priceSpan = document.querySelector(".price");
   const buyNowBtn = document.getElementById("buyNowBtn");
+  const productName = "Official Merchandise - GDGC, NIT Silchar";
   const basePrice = 399;
 
   let currentQty = 1;
@@ -12,16 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updateStateAndLocalStorage = () => {
     const totalPrice = currentQty * basePrice;
-    qtySpan.textContent = currentQty;
+    qtySpan.textContent = String(currentQty);
     priceSpan.textContent = `₹${totalPrice}`;
-    localStorage.setItem("quantity", currentQty);
+    localStorage.setItem("productName", productName);
+    localStorage.setItem("quantity", String(currentQty));
     localStorage.setItem("selectedSize", selectedSize || "");
-    localStorage.setItem("totalPrice", totalPrice);
+    localStorage.setItem("totalPrice", String(totalPrice));
   };
 
   const initializeFromLocalStorage = () => {
     const storedQty = localStorage.getItem("quantity");
     currentQty = storedQty ? parseInt(storedQty, 10) : 1;
+    selectedSize = null;
     updateStateAndLocalStorage();
   };
 
