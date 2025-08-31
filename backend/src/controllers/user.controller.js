@@ -33,13 +33,14 @@ const submitUserData = asyncHandler(async (req, res) => {
   ) {
     throw new ApiError(400, "All fields are required");
   }
-  const proofOfPaymentLocalPath = req.files?.proofOfPayment[0]?.path;
+  const proofOfPaymentLocalPath = await req.files?.proofOfPayment[0]?.path;
+  console.log(proofOfPaymentLocalPath)
   if (!proofOfPaymentLocalPath) {
-    throw new ApiError(400, "Proof of payment is needed");
+    throw new ApiError(400, "Proof of payment is needed 1");
   }
   const proofOfPayment = await uploadOnCloudinary(proofOfPaymentLocalPath);
   if (!proofOfPayment) {
-    throw new ApiError(400, "Proof of payment is needed");
+    throw new ApiError(400, "Proof of payment is needed 2");
   }
   const user= await User.create({
     size,
